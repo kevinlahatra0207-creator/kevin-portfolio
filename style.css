@@ -1,0 +1,214 @@
+/* =========================
+   1. CONFIGURATION GENERALE
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+     }
+        :root {
+    --background: #0b1220;
+    --surface: #111c30;
+    --surface-light: #17263d;
+    --primary: #00d9a0;
+    --white: #ffffff;
+    --text: #b8c5d6;
+    }
+  body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--white);
+    line-height: 1.7;
+   }
+/* =========================
+   2. NAVIGATION
+========================= */
+  header {
+    background: rgba(11, 18, 32, 0.95);
+    border-bottom: 1px solid #24334a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+ } 
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+.logo {
+    color: var(--white);
+    font-size: 27px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.logo span {
+    color: var(--primary);
+}
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    color: var(--primary);
+}
+/* =========================
+   3. SECTION ACCUEIL
+========================= */
+.hero {
+    min-height: 520px;
+    max-width: 1150px;
+    margin: auto;
+    padding: 120px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.intro {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.2;
+    max-width: 750px;
+    margin-bottom: 25px;
+}
+.description {
+    color: var(--text);
+    font-size: 18px;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+/* =========================
+   4. BOUTONS
+========================= */
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: #071a17;
+    padding: 14px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 217, 160,
+0.2);
+}
+/* =========================
+   5. SECTIONS GENERALES
+========================= */
+section:not(.hero) {
+    max-width: 1150px;
+    margin: auto;
+    padding: 85px 30px;
+}
+section h2 {
+    font-size: 34px;
+    margin-bottom: 25px;
+}
+section p {
+    color: var(--text);
+}
+/* =========================
+   6. CARTES DE COMPETENCES
+========================= */
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+.service-card {
+    background: var(--surface);
+    border: 1px solid #25364e;
+    border-radius: 12px;
+    padding: 30px;
+    transition: 0.3s;
+}
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    background: var(--surface-light);
+}
+.service-card h3 {
+    color: var(--primary);
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+/* =========================
+   7. REALISATIONS
+========================= */
+#realisations {
+    background: var(--surface);
+    border-radius: 15px;
+    margin-top: 20px;
+}
+/* =========================
+   8. CONTACT
+========================= */
+#contact {
+    text-align: center;
+}
+#contact p {
+    margin-bottom: 25px;
+}
+/* =========================
+   9. PIED DE PAGE
+========================= */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #070d18;
+    border-top: 1px solid #24334a;
+}
+footer p {
+    color: var(--text);
+    font-size: 14px;
+}
+/* =========================
+   10. RESPONSIVE MOBILE
+========================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+    .hero {
+        padding: 90px 25px;
+        min-height: 450px;
+    }
+    .hero h1 {
+        font-size: 38px;
+    }
+    .services {
+        grid-template-columns: 1fr;
+    }
+    section:not(.hero) {
+        padding: 60px 25px;
+    }
+    section h2 {
+        font-size: 28px;
+    }
+}
